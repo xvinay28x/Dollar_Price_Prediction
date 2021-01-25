@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/home_style.css')}}">
+  <title>Prediction of US Dollar Price In future </title>
+</head>
+<body>
+  <div class="login">
+
+    <center>
+      <h1 style="background-color:tomato;">$ Predict The US Dollar Price In INR $</h1><br>
+      <form method = "POST" action = "{{url_for('home')}}">
+        <b><input type="text" id="text_1" name = 'a' placeholder = "Date" required = "required" /><br><br>
+           <input type="text" name = 'b' placeholder = "Month" required = "required" /><br><br>
+           <input type="text" name = 'c' placeholder = "Year" required = "required" /><br><br><br>
+
+        <button type="submit" >Predict</button>
+      </form>
+    </center>
+    <br>
+    <center>
+      <h1 style="color:#F1C40F ;">
+        {{ prediction_text }}
+      </h1>
+    </center>
+  </div>
+</body>
+</html>
