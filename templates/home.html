@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="{{url_for('static',filename='css/home_style.css')}}">
   <title>Prediction of US Dollar Price In future </title>
+  <style>
+    body {
+  background-image: url("https://image.cnbcfm.com/api/v1/image/106770091-1604023698284-GettyImages-102170183.jpg?v=1607044309&w=740&h=416");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+    }
+  </style>
 </head>
 <body>
   <div class="login">
-
     <center>
       <h1 style="background-color:tomato;">$ Predict The US Dollar Price In INR $</h1><br>
       <form method = "POST" action = "{{url_for('home')}}">
@@ -20,7 +26,7 @@
     </center>
     <br>
     <center>
-      <h1 style="color:#F1C40F ;">
+      <h1>
         {{ prediction_text }}
       </h1>
     </center>
