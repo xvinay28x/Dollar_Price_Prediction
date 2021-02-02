@@ -15,7 +15,7 @@ def home():
     data1 = request.form['a']
     data2 = request.form['b']
     data3 = request.form['c']
-    arr = np.array([[data1, data2, data3]])
+    arr = np.array([[data1, data2, data3]],dtype="float64")
     pre = model.predict(arr)
     output = round(pre[0], 2)
     return render_template("home.html", prediction_text = "PREDICTION : Rs.{}".format(output))

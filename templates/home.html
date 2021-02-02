@@ -5,28 +5,73 @@
   <title>Prediction of US Dollar Price In future </title>
   <style>
     body {
-  background-image: url("https://image.cnbcfm.com/api/v1/image/106770091-1604023698284-GettyImages-102170183.jpg?v=1607044309&w=740&h=416");
+  background-image: url("https://wallpapercave.com/wp/wp4254882.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%;
+    }
+    #text_1{
+      background-color: rgb(83, 76, 76);
+      text-align: center;
+      border-radius: 30px;
+      font-size: 25px;
+      margin-top: 20px;
+      width: 130px;
+    }
+    #text_2{
+      background-color: rgb(83, 76, 76);
+      text-align: center;
+      border-radius: 30px;
+      font-size: 25px;
+      width: 130px;
+    }
+    #text_3{
+      background-color: rgb(83, 76, 76);
+      text-align: center;
+      border-radius: 30px;
+      font-size: 25px;
+      width: 130px;
+    }
+    #text_1:hover{
+      background-color: rgb(56, 55, 55);
+    }
+    #text_2:hover{
+      background-color: rgb(56, 55, 55);
+    }
+    #text_3:hover{
+      background-color: rgb(56, 55, 55);
+    }
+    #bt:hover{
+      background-color: gold;
+    }
+    #bt{
+      width: 70px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    #pre:hover{
+      color: rgb(235, 17, 71);
+    }
+    #pre{
+      color: white;
     }
   </style>
 </head>
 <body>
   <div class="login">
     <center>
-      <h1 style="background-color:tomato;">$ Predict The US Dollar Price In INR $</h1><br>
+      <h1 style="color:rgb(253, 253, 252);">$ Predict The US Dollar Price In INR $</h1><br>
       <form method = "POST" action = "{{url_for('home')}}">
-        <b><input type="text" id="text_1" name = 'a' placeholder = "Date" required = "required" /><br><br>
-           <input type="text" name = 'b' placeholder = "Month" required = "required" /><br><br>
-           <input type="text" name = 'c' placeholder = "Year" required = "required" /><br><br><br>
+        <b><input type="text" id="text_1" name = 'a' placeholder = "DATE" required = "required" /><br><br>
+           <input type="text" id="text_2" name = 'b' placeholder = "MONTH" required = "required" /><br><br>
+           <input type="text" id="text_3" name = 'c' placeholder = "YEAR" required = "required" /><br><br><br>
 
-        <button type="submit" >Predict</button>
+        <button type="submit" id="bt">Predict</button>
       </form>
     </center>
     <br>
     <center>
-      <h1>
+      <h1 id="pre">
         {{ prediction_text }}
       </h1>
     </center>
